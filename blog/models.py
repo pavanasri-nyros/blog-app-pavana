@@ -28,7 +28,7 @@ class Post(models.Model):
     s_heading = models.CharField(max_length=2000, default='')
     s_heading_text = models.CharField(max_length=2000, default='')
     category = models.CharField(max_length=2000, choices=CATEGORY_CHOICES, default='')
-    created_date = models.DateTimeField(null = True, blank = True, default= timezone.now)
+    created_date = models.DateTimeField(auto_now_add=True)
     
     tag_1 = models.CharField(max_length=2000, default='')
     tag_2 = models.CharField(max_length=2000, default='')
